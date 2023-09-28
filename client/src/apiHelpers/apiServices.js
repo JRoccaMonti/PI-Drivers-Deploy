@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const localEndpoint = 'https://server-zl85.onrender.com/';
-const ipEndpoint = 'http://192.168.1.83:3001/';
 
 export async function newDriver(formData) {
     try {
@@ -10,12 +9,8 @@ export async function newDriver(formData) {
         return response.data;
 
     } catch (localError) {
-        try {
-            const ipResponse = await axios.post(`${ipEndpoint}driver`, formData);
-            return ipResponse.data;
-        } catch (ipError) {
-            throw ipError;
-        }
+        console.log(localError);
+        throw localError;
     }
 }
 export async function newNationality(formData) {
@@ -25,12 +20,8 @@ export async function newNationality(formData) {
         return response.data;
 
     } catch (localError) {
-        try {
-            const ipResponse = await axios.post(`${ipEndpoint}nation`, formData);
-            return ipResponse.data;
-        } catch (ipError) {
-            throw ipError;
-        }
+        console.log(localError);
+        throw localError;
     }
 }
 
@@ -42,12 +33,7 @@ export const getDetails = async (id) => {
       return response.data;
 
     } catch (localError) {
-        try {
-            const ipResponse = await axios.post(`${ipEndpoint}drivers/${id}`);
-            return ipResponse.data;
-
-        } catch (ipError) {
-            throw ipError;
-        }
+        console.log(localError);
+        throw localError;
     }
   };
