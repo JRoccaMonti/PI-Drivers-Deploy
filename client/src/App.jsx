@@ -11,6 +11,7 @@ import './App.css';
 
 function App() {
   const navigate = useNavigate();
+  const [darkMode, setDarkMode] = useState(true);
 
   // Redirige a la página principal ("/") al recargar la página
   useEffect(() => {
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <>
-      <div className='app'>
+      <div className={`app ${darkMode ? 'dark-mode' : ''}`}>
         <Nav />
         <Routes>
           <Route path='/' element={<LandingPage />} />
