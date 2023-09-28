@@ -98,7 +98,7 @@ function HomePage() {
     dispatch(getDriversName(nameSearch));
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 500)); // Simula una operación demorada
+      await new Promise((resolve) => setTimeout(resolve, 1000)); // Simula una operación demorada
       handleFilterChange();
       handleOrderChange();
       handlePageChange(1);
