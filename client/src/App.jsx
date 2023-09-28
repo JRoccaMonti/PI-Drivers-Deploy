@@ -14,7 +14,7 @@ function App() {
 
   // Redirige a la página principal ("/") al recargar la página
   useEffect(() => {
-      navigate('https://pi-drivers-deploy.vercel.app/');
+      navigate('/');
   }, []);
 
   return (
