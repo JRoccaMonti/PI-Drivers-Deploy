@@ -2,14 +2,12 @@ const express = require("express");
 const router = require("./routes");
 const morgan = require("morgan");
 const cors = require("cors");
-const cookieParser = require('cookie-parser');
 
 const server = express();
 
 server.use(express.static(__dirname + '/public'));
 server.use(express.urlencoded({ extended: true }));
 
-server.use(cookieParser());
 
 server.use(morgan("dev"));
 server.use(express.json());
