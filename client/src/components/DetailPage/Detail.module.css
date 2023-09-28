@@ -1,0 +1,104 @@
+.containerBox{
+    padding: 25px;
+    margin-top: 5px;
+    width: 70vw;
+    height: 80vh;
+    display: grid;
+    grid:
+        "header header" 15%
+        "data imgbox"  80%
+        "footer footer" 5%
+        / 2fr 1fr;
+    gap: 1rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 7%;
+    background-color: black;
+    border: solid 5px rgba(182, 50, 50, 0.515);
+}
+.containerBox input{
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 17px;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+
+
+.titleBox{
+    grid-area: header;
+}
+.titleBox h3{
+    font-size: 2rem;
+}
+.dataBox{
+    grid-area: data;
+    display: grid;
+    grid:
+        "nationBox birthdateBox teamBox" 15%
+        "descriptionBox descriptionBox descriptionBox"  80%
+        / 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+.dataBox p{
+    padding: 0;
+    margin: 0;
+}
+.nationBox{
+    text-align: center;
+    align-items: center;
+    grid-area: nationBox;
+}
+
+.birthdateBox{
+    text-align: center;
+    align-items: center;
+    grid-area: birthdateBox;
+}
+.teamBox{
+    text-align: center;
+    align-items: center;
+    grid-area: teamBox;
+}
+.descriptionBox{
+    display: flex;
+    grid-area: descriptionBox;
+    text-align: justify;
+    overflow: auto;
+}
+.imgBox{
+    grid-area: imgbox;
+    border-radius: 25%;
+    overflow: hidden;
+}
+.footerBox{
+    grid-area: footer;
+}
+.imgRender{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.wikiBox{
+    position: absolute;
+    bottom: 50px;
+    left: 5%;
+    transform: translateX(-5%);
+}
+.wikiBox a{
+    text-decoration: none;
+    color: white;
+}
+.idBox{
+    position: absolute;
+    bottom: 30px;
+    right: 5%;
+    transform: translateX(-5%);
+}

@@ -1,0 +1,238 @@
+
+.containerBox{
+    margin-top: 15px;
+    width: 100%;
+}
+.filter{
+    width: 0; /* Inicialmente, el menú está oculto */
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: width 0.15s ease; /* Animación de apertura/cierre */
+    overflow-x: hidden;
+    z-index: 999;
+    text-align: left;
+    background: url(../../assets/wp5986721-f1-2023-logo-wallpapers.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.filter.visible {
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 250px; /* Ancho del menú cuando está abierto */
+  }
+.box1{
+    grid-area: body;
+    display: grid;
+    grid:
+        "header" auto
+        "main" auto
+        / 1fr;
+    gap: 8px;
+}
+.filterOrder{
+    display: grid;
+    grid-template-rows: repeat(6, 0.2fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+.filteTipe{
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 8px;
+}
+.menuButton{
+    position: absolute;
+    right: 0;
+}
+.applyFilter{
+    margin-top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.Order{
+    display: grid;
+    grid-template-rows: repeat(3, 50px);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 8px;
+}
+.nameInput{
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    color: #fff;
+    padding-bottom: 6px;
+    background: transparent;
+    transition: border-color 0.2s;
+    border-width: 3px;
+}
+.nameInput::placeholder{
+    color: transparent;
+}
+.nameInput:focus{
+    border-image: linear-gradient(to right, #991111, #ef3838);
+    border-image-slice: 1;
+}
+
+
+
+/* targetas*/
+.pagBox button:disabled {
+    display: none;
+}
+.pagBox{
+    grid-area: header;
+    height: 50px;
+}
+.pag{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    display: grid;
+    grid:
+    "pageButtonFirst pageButtonTenMinus pageButtonFiveMinus pageButtonOneMinus pageButtonCurrent pageButtonOnePlus pageButtonFivePlus pageButtonTenPlus pageButtonLast" 1fr
+    / 11% 11% 11% 11% 11% 11% 11% 11% 11%;
+}
+.pageButtonFirst{
+    grid-area: pageButtonFirst;
+}
+.pageButtonTenMinus{
+    grid-area: pageButtonTenMinus;
+}
+.pageButtonFiveMinus{
+    grid-area: pageButtonFiveMinus;
+}
+.pageButtonOneMinus{
+    grid-area: pageButtonOneMinus;
+}
+.pageButtonCurrent{
+    border: solid 5px red;
+    grid-area: pageButtonCurrent;
+}
+.pageButtonOnePlus{
+    grid-area: pageButtonOnePlus;
+}
+.pageButtonFivePlus{
+    grid-area: pageButtonFivePlus;
+}
+.pageButtonTenPlus{
+    grid-area: pageButtonTenPlus;
+}
+.pageButtonLast{
+    grid-area: pageButtonLast;
+}
+.pag button{
+    transform: scale(0.9);
+    padding: 0;
+    margin: 0;
+}
+
+
+.card_box{
+    justify-content: center;
+    margin-top: 15px;
+    grid-area: main;
+    place-items: center;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(2, 350px);
+    grid-template-columns: repeat(5, 250px);
+}
+.card_littlebox{
+    transform: scale(0.75);
+}
+
+.card_box_text{
+    background-color: black;
+    border: solid 5px #991111;
+    border-radius: 15%;
+    padding: 25px;
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+@media (max-width:1100px) {
+    .card_box{
+        grid-template-rows: repeat(3, 360px);
+        grid-template-columns: repeat(3, auto);
+    }
+    .card_littlebox{
+        transform: scale(0.75);
+        height: 480px;
+        justify-self: center;
+        margin: 0;
+    }
+}
+@media (max-width:800px) {
+    .card_box{
+        grid-template-rows: repeat(3, 360px);
+        grid-template-columns: repeat(3, 240px);
+    }
+    .card_littlebox{
+        transform: scale(0.6);
+        height: 480px;
+        justify-self: center;
+        margin: 0;
+    }
+    .pageButtonTen{
+        display: none;
+    }
+}
+@media (max-width:700px) {
+    .pag{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) scale(0.5);
+    }
+    .card_box{
+        grid-template-rows: repeat(5, 260px);
+        grid-template-columns: repeat(2, 200px);
+    }
+    .card_littlebox{
+        transform: scale(0.6);
+        height: 480px;
+        justify-self: center;
+        margin: 0;
+    }
+    .pageButtonTen{
+        display: none;
+    }
+    .pageButtonFive{
+        display: none;
+    }
+}
+@media (max-width:400px) {
+    .pag{
+        position: absolute;
+        left: 40%;
+        transform: translateX(-50%) scale(0.6);
+    }
+    .card_box{
+        grid-template-rows: repeat(5, 260px);
+        grid-template-columns: repeat(2, 190px);
+    }
+    .card_littlebox{
+        transform: scale(0.575);
+        height: 480px;
+        justify-self: center;
+        margin: 0;
+    }
+    .pageButtonTen{
+        display: none;
+    }
+    .pageButtonFive{
+        display: none;
+    }
+}

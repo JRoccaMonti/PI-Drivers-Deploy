@@ -1,0 +1,27 @@
+.generalContainer{
+    width: 100vw;
+    height: 60px;
+    background: url(../../assets/f1-road-trip-from-castle-to-castle_841.png);
+    border-bottom: 10px solid rgba(172, 12, 12, 0.444);
+    border-bottom-left-radius: 38%;
+    border-bottom-right-radius: 38%;
+}
+.imgF1{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -25px;
+    left: 5px;
+}
+.regButton{
+    transform: scale(0.6);
+    position: absolute;
+    right: -25px;
+    top: 4px;
+}
+.natButton{
+    transform: scale(0.6);
+    position: absolute;
+    right: 100px;
+    top: 4px;
+}

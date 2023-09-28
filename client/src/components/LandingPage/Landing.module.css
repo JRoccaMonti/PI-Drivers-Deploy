@@ -1,0 +1,22 @@
+.generalContainer{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../../assets/wp11955781-f1-art-wallpapers.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+p{
+    color: white;
+}
+@media (max-width:750px) {
+    .generalContainer{
+        background: url(../../assets/wp5986721-f1-2023-logo-wallpapers.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }    
+}
