@@ -4,7 +4,7 @@ const localEndpoint = 'https://server-zl85.onrender.com/';
 const ipEndpoint = 'http://192.168.1.83:3001/';
 export const getTeams = () => {
   return (dispatch) => {
-      axios.get(localEndpoint)
+      axios.get(`${localEndpoint}teams`)
           .then(({ data }) => {
               dispatch({
                   type: GET_TEAMS,
@@ -35,7 +35,7 @@ export const getTeams = () => {
 export const getDrivers = () => {
     return (dispatch) => {
 
-        axios.get(localEndpoint)
+        axios.get(`${localEndpoint}drivers`)
             .then(({ data }) => {
                 dispatch({
                     type: GET_DRIVERS,
