@@ -10,7 +10,7 @@ function Nav() {
         dispatch(getTeams());
         dispatch(getDrivers());
     }, [ ]);
-    const imageUrl = `http://192.168.1.83:3001/images/logo 2.png`;
+    const imageUrl = `https://server-zl85.onrender.com/images/logo 2.png`;
     return (
         <div className={style.generalContainer}>
             <div>
