@@ -24,6 +24,7 @@ a:hover {
 
 body {
   background: url(./assets/wp5814471-black-and-red-hexagon-wallpapers.jpg);
+  background-repeat: repeat;
   /*
   background: url(./assets/wp3547544-carbon-fiber-high-resolution-wallpaper-free.jpg);
   */
