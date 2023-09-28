@@ -77,11 +77,11 @@ const firstFifteen = async (req, res) => {
 
         matchingDrivers.forEach((driver)=>{
             if (driver.image.url == '') {
-                driver.image.url = 'http://localhost:3001/images/driversDB/logo.png';
+                driver.image.url = 'https://server-zl85.onrender.com/images/driversDB/logo.png';
                 return;
             }
             if (driver.imagen == '') {
-                driver.imagen = 'http://localhost:3001/images/driversDB/logo.png';
+                driver.imagen = 'https://server-zl85.onrender.com/images/driversDB/logo.png';
                 return;
             }
         });
