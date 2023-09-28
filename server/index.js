@@ -22,12 +22,6 @@ startServer();*/
 
 conn.sync({ force: true }).then(() => {
 
-  try {
-    
-  } catch (error) {
-    
-  }
-
   server.listen(PORT,"0.0.0.0", () => {
     console.log(`Server listening on port ${PORT}`);
   })
