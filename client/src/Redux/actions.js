@@ -1,6 +1,6 @@
 import { GET_TEAMS,GET_DRIVERS,GET_DRIVERS_NAME,ORDER,FILTER} from './actionTypes';
 import axios from "axios";
-const localEndpoint = 'https://pi-drivers-deploy.vercel.app/';
+const localEndpoint = 'https://server-zl85.onrender.com/';
 const ipEndpoint = 'http://192.168.1.83:3001/';
 export const getTeams = () => {
   return (dispatch) => {
@@ -63,7 +63,7 @@ export const getDriversName = (name) => {
         return getDrivers();
     }
     return (dispatch) => {
-        const localEndpoint = ('https://pi-drivers-deploy.vercel.app/drivers/name?name=' + name);
+        const localEndpoint = ('https://server-zl85.onrender.com/drivers/name?name=' + name);
         const ipEndpoint = 'https://pi-drivers-deploy.vercel.app/drivers/name?name=' + name;
 
         axios.get(localEndpoint)

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const localEndpoint = 'https://pi-drivers-deploy.vercel.app/';
+const localEndpoint = 'https://server-zl85.onrender.com/';
 const ipEndpoint = 'http://192.168.1.83:3001/';
 
 export async function newDriver(formData) {
