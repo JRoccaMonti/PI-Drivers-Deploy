@@ -57,11 +57,11 @@ const allDrivers = async (req, res) => {
 
         combinedArray.forEach((driver)=>{
             if (driver.image.url == '') {
-                driver.image.url = 'http://192.168.1.83:3001/images/driversDB/logo.png';
+                driver.image.url = 'https://server-zl85.onrender.com/images/driversDB/logo.png';
                 return;
             }
             if (driver.imagen == '') {
-                driver.imagen = 'http://192.168.1.83:3001/images/driversDB/logo.png';
+                driver.imagen = 'https://server-zl85.onrender.com/images/driversDB/logo.png';
                 return;
             }
         });

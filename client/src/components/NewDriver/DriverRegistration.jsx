@@ -85,7 +85,6 @@ function DriverRegistration() {
                 teamId: []
             });
         } catch (error) {
-            console.log(error);
             const text = error.response.data.message.join(' ')
             console.log(text);
             alert(text);
