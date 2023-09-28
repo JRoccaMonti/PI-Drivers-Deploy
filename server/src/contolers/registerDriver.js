@@ -25,7 +25,7 @@ const saveImage = async (base64Image, filename) => {
         
         //const imagePath = `C:\\Users\\Jano\\Desktop\\Henrry\\cr-pi-drivers-main\\server\\src\\public\\images\\driversDB\\${filename}`;
         const imagePath = path.join(imagesDirectory, filename);
-        const url = `http://192.168.1.83:3001/images/driversDB/${filename}`;
+        const url = `https://server-zl85.onrender.com/images/driversDB/${filename}`;
   
         // Utiliza fs.writeFileSync para guardar el archivo en el servidor
         fs.writeFileSync(imagePath, imageBuffer);
