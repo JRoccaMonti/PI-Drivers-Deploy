@@ -9,7 +9,7 @@ const detailById = async (req, res) => {
       const response = await axios.get(`http://localhost:5000/drivers/${idSearch}`);
 
       if (response.data.image.url == '') {
-          response.data.image.url = 'http://192.168.1.83:3001/images/driversDB/logo.png';
+          response.data.image.url = 'https://server-zl85.onrender.com/images/driversDB/logo.png';
       }
 
       if (response.status === 200) {
